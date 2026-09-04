@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Board Breaker — Tiger Den Dojo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pose-idle">
+
+<a class="back-link" href="../">&larr; All prototypes</a>
+
+<h1 class="title">Board Breaker</h1>
+
+<div class="stage" id="stage">
+
+  <div class="hud">
+    <div>Score: <span id="score">0</span></div>
+    <div>Best: <span id="best">0</span></div>
+  </div>
+
+  <div class="height-guides">
+    <div class="guide guide--high"><span>&uarr; High</span></div>
+    <div class="guide guide--mid"><span>&rarr; Mid</span></div>
+    <div class="guide guide--low"><span>&darr; Low</span></div>
+  </div>
+
+  <div class="boards-layer" id="boardsLayer"></div>
+
+  <div class="character" id="character">
+    <img id="sprite-idle" class="sprite" src="assets/ready.png" alt="">
+    <img id="sprite-low" class="sprite" src="assets/low_kick.png" alt="">
+    <img id="sprite-mid" class="sprite" src="assets/mid_kick.png" alt="">
+    <img id="sprite-high" class="sprite" src="assets/high_kick.png" alt="">
+  </div>
+
+  <div class="ground"></div>
+
+  <div class="overlay" id="overlay">
+    <h2 id="overlayTitle">Board Breaker</h2>
+    <p id="overlayMessage">Boards fly in from the right at three different heights. Kick the right height before they reach you.</p>
+    <ul class="controls">
+      <li><kbd>&darr;</kbd> Low Kick</li>
+      <li><kbd>&rarr;</kbd> Mid Kick</li>
+      <li><kbd>&uarr;</kbd> High Kick</li>
+    </ul>
+    <button id="startBtn">Start</button>
+  </div>
+
+</div>
+
+<p class="hint">Tip: works with keyboard arrow keys, or tap the buttons below on mobile.</p>
+
+<div class="touch-controls">
+  <button data-kick="low">&darr; Low</button>
+  <button data-kick="mid">&rarr; Mid</button>
+  <button data-kick="high">&uarr; High</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>

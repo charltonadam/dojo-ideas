@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiger Den Dojo — Prototypes</title>
+<style>
+  :root {
+    --bg: #1b1b1d;
+    --panel: #242427;
+    --panel-border: #35353a;
+    --red: #c0392b;
+    --red-bright: #e0473a;
+    --text: #f2f0ea;
+    --text-dim: #b5b3ac;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 80px;
+  }
+  header {
+    text-align: center;
+    max-width: 640px;
+    margin-bottom: 44px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border: 1px solid var(--red);
+    color: var(--red-bright);
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  h1 {
+    margin: 0 0 10px;
+    font-size: 34px;
+    letter-spacing: -0.01em;
+  }
+  header p {
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin: 0;
+    font-size: 15px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    width: 100%;
+    max-width: 780px;
+  }
+  a.card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 14px;
+    padding: 22px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  a.card:hover {
+    border-color: var(--red);
+    transform: translateY(-2px);
+  }
+  .card .icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .card h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+  }
+  .card p {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+  .card .tag {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--red-bright);
+  }
+  footer {
+    margin-top: 60px;
+    color: var(--text-dim);
+    font-size: 12.5px;
+    text-align: center;
+  }
+  footer a { color: var(--text-dim); }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="badge">Tiger Den Dojo</span>
+  <h1>Prototype Games &amp; Extras</h1>
+  <p>A collection of small in-browser prototypes for the dojo. Pick one below to try it out —
+  each idea lives in its own folder.</p>
+</header>
+
+<div class="grid">
+  <a class="card" href="board-breaking/">
+    <span class="icon">🥋</span>
+    <h2>Board Breaker</h2>
+    <p>A Dino-Run-style reflex game — kick incoming boards at the right height before they reach you.</p>
+    <span class="tag">Playable</span>
+  </a>
+</div>
+
+<footer>
+  More ideas coming soon &middot; <a href="https://www.tigerdendojo.com" target="_blank" rel="noopener">tigerdendojo.com</a>
+</footer>
+
+</body>
+</html>
